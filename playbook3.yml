@@ -1,0 +1,14 @@
+---
+ - name: Configuring tomcat9
+   hosts: all
+   tasks:
+     - name: Install tomcat9
+       apt:
+         name: tomcat9
+         state: present
+         update_cache: yes
+     - name: Install tomcat9-admin
+       apt:
+          name: tomcat9-admin
+          state: present
+    

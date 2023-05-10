@@ -1,0 +1,13 @@
+---
+- name: Login into docker repository and upload a docker image
+  hosts: 172.31.39.31
+  tasks:
+    - name: Login into docker hub
+      docker_login:
+        username: navanitha1siri
+        password: Bhushetti@9384
+    - name: push the customised docker image
+      docker_image:
+         name: navanitha1siri/jenkins6
+         push: true
+         source: pull 
